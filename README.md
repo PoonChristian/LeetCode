@@ -4,10 +4,12 @@ Solutions for LeetCode problems in Java
 
 # Types of Problems Included So Far
 
-* Strings
+The bolded and italicized type is what I'm currently practicing.
+
+* ***Strings***
 * Dynamic Programming
 
-# Types of Problems Will Include in the Future
+# Types of Problems I Will Include in the Future
 
 * Array
 * Linked List
