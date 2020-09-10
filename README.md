@@ -6,13 +6,13 @@ Solutions for LeetCode problems in Java
 
 The bolded and italicized type is what I'm currently practicing.
 
-* ***Strings***
+* ***String***
 * Dynamic Programming
+* Linked List
 
 # Types of Problems I Will Include in the Future
 
 * Array
-* Linked List
 * Stack
 * Queue
 * Tree
