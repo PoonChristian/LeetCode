@@ -8,15 +8,15 @@ public class LongestCommonPrefix {
             return "";
         }
 
-        StringBuilder sb = new StringBuilder(strs[0]);
+        StringBuilder prefix = new StringBuilder(strs[0]);
 
         for (int i = 1; i < strs.length; i++) {
-            while (strs[i].indexOf(sb.toString()) != 0) {
-                sb.deleteCharAt(sb.length() - 1);
+            while (strs[i].indexOf(prefix.toString()) != 0) {
+                prefix.deleteCharAt(prefix.length() - 1);
             }
         }
 
-        return sb.toString();
+        return prefix.toString();
     }
 
     public String verticalScan(String[] strs) {
@@ -24,21 +24,21 @@ public class LongestCommonPrefix {
             return "";
         }
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder prefix = new StringBuilder();
 
         for (int i = 0; i < strs[0].length(); i++) {
             char c = strs[0].charAt(i);
 
             for (int j = 1; j < strs.length; j++) {
                 if (i >= strs[j].length() || strs[j].charAt(i) != c) {
-                    return sb.toString();
+                    return prefix.toString();
                 }
             }
 
-            sb.append(c);
+            prefix.append(c);
         }
 
-        return sb.toString();
+        return prefix.toString();
     }
 
     public String trieScan(String[] strs) {
