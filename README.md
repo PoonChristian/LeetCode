@@ -6,19 +6,17 @@ Solutions for LeetCode problems in Java
 
 The bolded and italicized type is what I'm currently practicing.
 
-* ***String***
-* Dynamic Programming
+* String
+* ***HashMap***
 * Linked List
+* Dynamic Programming
 
 # Types of Problems I Will Include in the Future
 
-* Array
-* Stack
-* Queue
+* Stacks & Queues
 * Tree
-* Heap
-* Hash Table
-* Trie
-* Greedy
-* Depth-First Search
 * Breadth-First Search
+* Depth-First Search
+* Backtracking
+* Greedy Algorithms
+* Memoization
