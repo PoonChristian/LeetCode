@@ -6,15 +6,15 @@ Solutions for LeetCode problems in Java
 
 The bolded and italicized type is what I'm currently practicing.
 
-* String
-* ***HashMap***
-* Linked List
+* Strings
+* ***Hash Maps***
+* Linked Lists
 * Dynamic Programming
 
 # Types of Problems I Will Include in the Future
 
 * Stacks & Queues
-* Tree
+* Trees
 * Breadth-First Search
 * Depth-First Search
 * Backtracking
