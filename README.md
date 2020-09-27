@@ -8,14 +8,14 @@ The bolded and italicized type is what I'm currently practicing.
 
 * Strings
 * Hash Maps
-* ***Linked Lists***
+* Linked Lists
+* ***Stacks & Queues***
+* Breadth-First Search
 * Dynamic Programming
 
 # Types of Problems I Will Include in the Future
 
-* Stacks & Queues
 * Trees
-* Breadth-First Search
 * Depth-First Search
 * Backtracking
 * Greedy Algorithms
