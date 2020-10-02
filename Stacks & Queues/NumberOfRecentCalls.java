@@ -3,7 +3,7 @@
 
 public class RecentCounter {
 
-    Queue<Integer> queue;
+    private Queue<Integer> queue;
 
     public RecentCounter() {
         this.queue = new LinkedList<Integer>();
