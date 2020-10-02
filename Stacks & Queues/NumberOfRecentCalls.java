@@ -11,10 +11,10 @@ public class RecentCounter {
 
     public int ping(int t) {
         this.queue.add(t);
-        while (queue.peek() < t - 3000) {
-            queue.remove();
+        while (this.queue.peek() < t - 3000) {
+            this.queue.remove();
         }
-        return queue.size();
+        return this.queue.size();
     }
 
 }
