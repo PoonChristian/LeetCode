@@ -16,8 +16,7 @@ public class NextGreaterElementII {
         // Loop over double the length of the array (allows for circular iteration)
         for (int i = 0; i < length * 2; i++) {
 
-            // Initialize a current index using the modulus operator over the original
-            // length
+            // Initialize an index using the modulus operator over the original length
             int currentIndex = i % length;
 
             // While the stack is NOT empty and the value at the top index is less than the

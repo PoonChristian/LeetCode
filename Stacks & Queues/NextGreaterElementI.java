@@ -3,8 +3,8 @@
 
 public class NextGreaterElementI {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        // Initialize a hashmap with the following key/value pair {element: next greater
-        // element}
+        // Initialize a hashmap with the following key/value pair
+        // {element: next greater element}
         Map<Integer, Integer> greaterElementMap = new HashMap<Integer, Integer>();
 
         // Initialize a stack to keep track of numbers that still need to be assigned a
