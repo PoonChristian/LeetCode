@@ -6,15 +6,15 @@ public class RecentCounter {
     private Queue<Integer> queue;
 
     public RecentCounter() {
-        this.queue = new LinkedList<Integer>();
+        queue = new LinkedList<Integer>();
     }
 
     public int ping(int t) {
-        this.queue.add(t);
-        while (this.queue.peek() < t - 3000) {
-            this.queue.remove();
+        queue.add(t);
+        while (queue.peek() < t - 3000) {
+            queue.remove();
         }
-        return this.queue.size();
+        return queue.size();
     }
 
 }
