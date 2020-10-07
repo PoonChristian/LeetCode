@@ -9,13 +9,13 @@ The bolded and italicized type is what I'm currently practicing.
 * Strings
 * Hash Maps
 * Linked Lists
-* ***Stacks & Queues***
+* Stacks & Queues
+* ***Trees***
 * Breadth-First Search
 * Dynamic Programming
 
 # Types of Problems I Will Include in the Future
 
-* Trees
 * Depth-First Search
 * Backtracking
 * Greedy Algorithms
