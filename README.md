@@ -10,8 +10,8 @@ The bolded and italicized type is what I'm currently practicing.
 * Hash Maps
 * Linked Lists
 * Stacks & Queues
-* ***Trees***
-* Breadth-First Search
+* Trees
+* ***Breadth-First Search***
 * Dynamic Programming
 
 # Types of Problems I Will Include in the Future
