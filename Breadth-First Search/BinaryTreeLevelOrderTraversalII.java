@@ -3,7 +3,7 @@
 
 public class BinaryTreeLevelOrderTraversal {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> levels = new LinkedList<List<Integer>>();
+        LinkedList<List<Integer>> levels = new LinkedList<List<Integer>>();
 
         if (root == null) {
             return levels;
@@ -30,7 +30,7 @@ public class BinaryTreeLevelOrderTraversal {
                 }
             }
 
-            levels.add(0, currentLevel);
+            levels.addFirst(currentLevel);
         }
 
         return levels;
