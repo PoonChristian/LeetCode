@@ -9,40 +9,30 @@ public class BinaryTreeZigZagLevelOrderTraversal {
             return levels;
         }
 
-        Deque<TreeNode> deque = new ArrayDeque<TreeNode>();
-        deque.offerLast(root);
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
         int row = 1;
 
-        while (!deque.isEmpty()) {
-            int size = deque.size();
-            List<Integer> currLevel = new ArrayList<Integer>();
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            LinkedList<Integer> currLevel = new LinkedList<Integer>();
 
             for (int i = 0; i < size; i++) {
-                TreeNode currNode;
+                TreeNode curr = queue.poll();
 
                 if (row % 2 == 1) {
-                    currNode = deque.pollFirst();
-
-                    if (currNode.left != null) {
-                        deque.offerLast(currNode.left);
-                    }
-
-                    if (currNode.right != null) {
-                        deque.offerLast(currNode.right);
-                    }
+                    currLevel.addLast(curr.val);
                 } else {
-                    currNode = deque.pollLast();
-
-                    if (currNode.right != null) {
-                        deque.offerFirst(currNode.right);
-                    }
-
-                    if (currNode.left != null) {
-                        deque.offerFirst(currNode.left);
-                    }
+                    currLevel.addFirst(curr.val);
                 }
 
-                currLevel.add(currNode.val);
+                if (curr.left != null) {
+                    queue.offer(curr.left);
+                }
+
+                if (curr.right != null) {
+                    queue.offer(curr.right);
+                }
             }
 
             levels.add(currLevel);
