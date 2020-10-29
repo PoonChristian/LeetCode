@@ -3,38 +3,27 @@
 
 public class LetterCombinationsOfAPhoneNumber {
 
-    private Map<Character, String> digitMap = new HashMap<Character, String>() {
-        {
-            put('2', "abc");
-            put('3', "def");
-            put('4', "ghi");
-            put('5', "jkl");
-            put('6', "mno");
-            put('7', "pqrs");
-            put('8', "tuv");
-            put('9', "wxyz");
-        }
-    };
-
-    private List<String> combinations = new ArrayList<String>();
-
     public List<String> letterCombinations(String digits) {
+        List<String> combinations = new ArrayList<String>();
         if (digits == null || digits.length() == 0) {
             return combinations;
         }
 
-        getLetterCombinations(digits, new StringBuilder(), 0);
+        String[] mappings = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+
+        getLetterCombinations(0, new StringBuilder(), mappings, digits, combinations);
         return combinations;
     }
 
-    public void getLetterCombinations(String digits, StringBuilder sb, int index) {
+    public void getLetterCombinations(int index, StringBuilder sb, String[] mappings, String digits,
+             List<String> combinations) {
         if (index >= digits.length()) {
             combinations.add(sb.toString());
         } else {
-            char digit = digits.charAt(index);
-            for (char letter : digitMap.get(digit).toCharArray()) {
-                sb.append(letter);
-                getLetterCombinations(digits, sb, index + 1);
+            String letters = mappings[digits.charAt(index) - '0'];
+            for (char c : letters.toCharArray()) {
+                sb.append(c);
+                getLetterCombinations(index + 1, sb, mappings, digits, combinations);
                 sb.deleteCharAt(sb.length() - 1);
             }
         }
