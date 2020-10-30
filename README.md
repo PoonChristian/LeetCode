@@ -12,12 +12,12 @@ The bolded and italicized type is what I'm currently practicing.
 * Stacks & Queues
 * Trees
 * Breadth-First Search
-* ***Depth-First Search***
+* Depth-First Search
+* ***Backtracking***
 * Dynamic Programming
 * ***MySQL***
 
 # Types of Problems I Will Include in the Future
 
-* Backtracking
 * Greedy Algorithms
 * Memoization
