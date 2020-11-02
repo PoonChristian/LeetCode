@@ -13,11 +13,11 @@ The bolded and italicized type is what I'm currently practicing.
 * Trees
 * Breadth-First Search
 * Depth-First Search
-* ***Backtracking***
+* Backtracking
+* ***Greedy Algorithms***
 * Dynamic Programming
 * ***MySQL***
 
 # Types of Problems I Will Include in the Future
 
-* Greedy Algorithms
 * Memoization
