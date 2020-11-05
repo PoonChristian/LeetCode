@@ -7,6 +7,7 @@ public class BoatsToSavePeople {
         int numBoats = 0;
         int i = 0;
         int j = people.length - 1;
+
         while (i <= j) {
             if (people[i] + people[j] <= limit) {
                 i++;
@@ -14,6 +15,7 @@ public class BoatsToSavePeople {
             j--;
             numBoats++;
         }
+        
         return numBoats;
     }
 }

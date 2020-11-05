@@ -7,6 +7,7 @@ public class BagOfTokens {
         int score = 0;
         int i = 0;
         int j = tokens.length - 1;
+
         while (i <= j) {
             if (tokens[i] <= P) {
                 P -= tokens[i++];
@@ -18,6 +19,7 @@ public class BagOfTokens {
                 i++;
             }
         }
+        
         return score;
     }
 }
