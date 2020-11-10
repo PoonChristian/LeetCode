@@ -24,7 +24,7 @@ public class CoinChangeII {
     }
 
     public int topDown(int amount, int[] coins) {
-        return changeRecursive(coins, 0, amount, new Integer[coins.length][amount + 1]);
+        return changeRecursive(coins, 0, amount, new Integer[coins.length][amount]);
     }
 
     public int bottomUp(int amount, int[] coins) {
