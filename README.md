@@ -15,8 +15,8 @@ The bolded and italicized type is what I'm currently practicing.
 * Depth-First Search
 * Backtracking
 * Greedy Algorithms
-* ***Memoization***
-* Dynamic Programming
-* ***MySQL***
+* Memoization
+* ***Dynamic Programming***
+* MySQL
 
 # Types of Problems I Will Include in the Future
