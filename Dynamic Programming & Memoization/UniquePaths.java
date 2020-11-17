@@ -1,6 +1,6 @@
 // LeetCode 62: Unique Paths
 // https://leetcode.com/problems/unique-paths/
-// Bottom Up and Top Down Solutions
+// Top Down and Bottom Up Solutions
 
 public class UniquePaths {
     private int uniquePathsRecursive(int[][] memo, int i, int j) {

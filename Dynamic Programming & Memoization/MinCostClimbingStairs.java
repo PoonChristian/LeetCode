@@ -1,5 +1,6 @@
 // LeetCode 746: Min Cost Climbing Stairs
 // https://leetcode.com/problems/min-cost-climbing-stairs/
+// Top Down and Bottom Up Solutions
 
 public class MinCostClimbingStairs {
     private int findMinCost(int[] cost, int[] memo, int index) {

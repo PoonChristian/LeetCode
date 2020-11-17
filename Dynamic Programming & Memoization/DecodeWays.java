@@ -1,6 +1,6 @@
 // LeetCode 91: Decode Ways
 // https://leetcode.com/problems/decode-ways/
-// Bottom Up and Top Down Solutions
+// Top Down and Bottom Up Solutions
 
 public class DecodeWays {    
     private int calculateNumDecodings(String s, int index, Integer[] memo) {

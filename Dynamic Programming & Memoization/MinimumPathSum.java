@@ -1,6 +1,6 @@
 // LeetCode 64: Minimum Path Sum
 // https://leetcode.com/problems/minimum-path-sum/
-// Bottom Up and Top Down Solutions
+// Top Down and Bottom Up Solutions
 
 public class MinimumPathSum {
     private int minPathSumRecursive(int[][] grid, int[][] memo, int i, int j) {

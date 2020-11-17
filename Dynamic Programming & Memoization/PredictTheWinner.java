@@ -1,6 +1,6 @@
 // LeetCode 486: Predict the Winner
 // https://leetcode.com/problems/predict-the-winner/
-// Bottom Up and Top Down Solutions
+// Top Down and Bottom Up Solutions
 
 public class PredictTheWinner {
     private int findWinner(int[] nums, int[][] memo, int start, int end) {

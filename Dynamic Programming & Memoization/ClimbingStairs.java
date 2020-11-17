@@ -1,6 +1,6 @@
 // LeetCode 70: Climbing Stairs
 // https://leetcode.com/problems/climbing-stairs/
-// Bottom Up and Top Down Solutions
+// Top Down and Bottom Up Solutions
 
 public class ClimbingStairs {
     private int findWays(int[] memo, int n) {

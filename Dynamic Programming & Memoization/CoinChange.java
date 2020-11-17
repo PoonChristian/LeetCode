@@ -1,6 +1,6 @@
 // LeetCode 322: Coin Change
 // https://leetcode.com/problems/coin-change/
-// Bottom Up and Top Down Solutions
+// Top Down and Bottom Up Solutions
 
 public class CoinChange {
     private int changeRecursive(int[] coins, int remaining, int[] dp) {
