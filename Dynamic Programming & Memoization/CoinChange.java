@@ -19,7 +19,7 @@ public class CoinChange {
         int min = Integer.MAX_VALUE;
 
         for (int coin : coins) {
-            int result = coinChangeRecursive(coins, remaining - coin, dp);
+            int result = changeRecursive(coins, remaining - coin, dp);
             if (result >= 0 && result < min) {
                 min = 1 + result;
             }
@@ -31,7 +31,7 @@ public class CoinChange {
     }
 
     public int topDown(int[] coins, int amount) {
-        return coinChangeRecursive(coins, amount, new int[amount]);
+        return changeRecursive(coins, amount, new int[amount]);
     }
 
     public int bottomUp(int[] coins, int amount) {
