@@ -1,5 +1,5 @@
 // LeetCode 14: Longest Common Prefix
-// https://leetcode.com/problems/coin-change/
+// https://leetcode.com/problems/longest-common-prefix/
 // Horizontal Scan, Vertical Scan, and Trie Solutions
 
 public class LongestCommonPrefix {

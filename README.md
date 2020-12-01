@@ -4,6 +4,7 @@ Solutions for LeetCode problems in Java and MySQL - documenting my LeetCode prob
 
 # Types of Problems Included So Far
 
+* Arrays
 * Strings
 * Hash Maps
 * Linked Lists
@@ -18,4 +19,5 @@ Solutions for LeetCode problems in Java and MySQL - documenting my LeetCode prob
 * Math
 * Bit Manipulation
 * Tries
+* Union Find
 * MySQL

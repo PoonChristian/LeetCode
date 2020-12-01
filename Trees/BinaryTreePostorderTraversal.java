@@ -20,29 +20,38 @@ public class BinaryTreePostorderTraversal {
     }
 
     public List<Integer> postorderTraversalStack(TreeNode root) {
-        LinkedList<Integer> postorder = new LinkedList<Integer>();
-
-        if (root == null) {
-            return postorder;
-        }
-
+        List<Integer> postorder = new ArrayList<Integer>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.push(root);
-
-        while (!stack.isEmpty()) {
-            TreeNode curr = stack.pop();
-
-            postorder.addFirst(curr.val);
-
-            if (curr.left != null) {
-                stack.push(curr.left);
+        TreeNode curr = root;
+        
+        // Iterate while curr is not null or while the stack still has elements to process
+        while (curr != null || !stack.isEmpty()) {
+            // Push all the nodes and keep traversing left
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
             }
-
-            if (curr.right != null) {
-                stack.push(curr.right);
+            
+            // Set temp to be the top node's right child
+            TreeNode temp = stack.peek().right;
+            
+            // If temp is null, that means the top node doesn't have a child, so we can immediately pop it and add it to our postorder
+            if (temp == null) {
+                temp = stack.pop();
+                postorder.add(temp.val);
+                
+                // We want to iterate again and check if the node we just popped is a right child of the stack's top node
+                // If so, that means we can safely process the stack's top node
+                // We must use a while loop and not an if statement in case we have a tree that falls completely to the right
+                while (!stack.isEmpty() && temp == stack.peek().right) {
+                    temp = stack.pop();
+                    postorder.add(temp.val);
+                }
+            } else {
+                curr = temp;
             }
         }
-
+        
         return postorder;
     }
 }
