@@ -14,7 +14,7 @@ Optimizations (Two Methods):
         - Time Complexity: O(n) since we iterate 3n times
         - Space Complexity: O(n) for storing extra arrays
     2. Use the two-pointer lower envelope approach to find the appropriate minimum between the left and right maxes
-        - The leftMax and rightMax are monotic
+        - The leftMax and rightMax are monotonic
             - LeftMax will always increase or stay the same toward the right /
             - RightMax will always increase or stay the same toward to the right \
         - Knowing the fact above, we can calculate the lower envelope (the minimum between the left max and right max)
