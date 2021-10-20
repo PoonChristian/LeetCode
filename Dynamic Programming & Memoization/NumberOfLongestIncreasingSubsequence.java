@@ -1,3 +1,6 @@
+// LeetCode 673: Number of Longest Increasing Subsequence
+// https://leetcode.com/problems/number-of-longest-increasing-subsequence/
+
 public class NumberOfLongestIncreasingSubsequence {
     public int findNumberOfLIS(int[] nums) {
         // Initialize variables to track the length of the longest subsequence of number of longest subsequences

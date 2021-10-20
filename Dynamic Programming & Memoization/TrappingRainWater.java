@@ -103,7 +103,7 @@ public class TrappingRainWater {
             // If leftMax is less than or equal to rightMax, then add leftMax - height[i] to our amount
             //      Move i forward since we know for sure i is where the minimum height lies at this current iteration
             // Otherwise, add rightMax - height[j] to our amount
-            //      Move j backward sinc we know for sure j is where the minimum height lies at this current iteration
+            //      Move j backward since we know for sure j is where the minimum height lies at this current iteration
             if (leftMax <= rightMax) {
                 amount += leftMax - height[i++];
             } else {

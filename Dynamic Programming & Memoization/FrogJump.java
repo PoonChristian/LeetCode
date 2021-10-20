@@ -90,6 +90,7 @@ public class FrogJump {
     }
 
     // Depth-First Search using Stacks and HashSets
+    // This solution is now "Time Limit Exceeded"
     public boolean canCrossDFS(int[] stones) {
         // Quick check to see if it is possible to jump from position to position
         for (int i = 3; i < stones.length; i++) {
