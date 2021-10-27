@@ -48,6 +48,7 @@ public class BinaryTreePostorderTraversal {
                     postorder.add(temp.val);
                 }
             } else {
+                // If temp is not null, then that means that there is a right child, so traverse to the right child
                 curr = temp;
             }
         }
