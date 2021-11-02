@@ -27,4 +27,31 @@ public class IntersectionOfTwoArraysII {
         
         return intersectionArray;
     }
+
+    public int[] intersect(int[] nums1, int[] nums2) {
+        // The commented lines below will sort the arrays
+        // Arrays.sort(nums1);
+        // Arrays.sort(nums2);
+        
+        List<Integer> intersect = new ArrayList<>();
+        int i = 0;
+        int j = 0;
+        
+        while (i < nums1.length && j < nums2.length) {
+            // 1. If nums1[i] == nums2[j], then we know both arrays share this common value, so add it to our intersect list and increment both pointers
+            // 2. If nums1[i] < nums2[j], then we must increment i in order to potentially find a value in nums1 that will equal nums2[j]
+            // 3. If nums1[i] > nums2[j], then we must increment j in order to potentially find a value in nums2 that will equal nums1[i]
+            if (nums1[i] == nums2[j]) {
+                intersect.add(nums1[i]);
+                i++;
+                j++;
+            } else if (nums1[i] < nums2[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+        
+        return intersect.stream().mapToInt(k -> k).toArray();
+    }
 }
