@@ -1,7 +1,8 @@
 // LeetCode 729: My Calendar I
 // https://leetcode.com/problems/my-calendar-i/
 
-// Object-Oriented Design: Segment Tree, where each node represents an interval with a start and an end
+// Object-Oriented Design: Segment Tree, where each node represents an interval with a start and an end.
+// This is technically a binary search tree except each node has segments rather than individual values
 public class MyCalendarI {
     // Every SegmentTreeNode will have a start, an end, a left pointer, and a right pointer
     class SegmentTreeNode {
