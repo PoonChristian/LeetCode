@@ -9,6 +9,7 @@ public class LicenseKeyFormatting {
         for (int i = S.length() - 1; i >= 0; i--) {
             char curr = Character.toUpperCase(S.charAt(i));
             if (curr != '-') {
+                // This if statement must come before appending the actual uppercase character below to prevent appending an extra dash to the string
                 if (count == K) {
                     sb.append('-');
                     count = 0;
