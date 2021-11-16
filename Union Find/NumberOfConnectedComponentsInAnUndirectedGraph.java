@@ -1,8 +1,15 @@
 // LeetCode 323: Number of Connected Components in an Undirected Graph
 // https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
 
+// Time Complexity: O(n + m * log(n)) where n is the number of nodes and m is the number of edges
+//      without path compression, the time complexity would be closer to O(n * m)
+//      with path compression and the union by rank optimization (not included), the time complexity would be O(n + m * amortized log(n))
+//          amortized log (n) is essentially constant, so the time complexity would be O(n + m)
+
+// Space Complexity: O(n) where n is the number of nodes we have, since we create an array to keep track of subsets
 public class NumberOfConnectedComponentsInAnUndirectedGraph {
     // Merge two nodes together into one subset by setting the parent of node1 to the parent of node2
+    // This means we need to find both parents and then assign one of the parents to point to the other
     private void union(int node1, int node2, int[] ids) {
         int parent1 = find(node1, ids);
         int parent2 = find(node2, ids);
@@ -11,11 +18,18 @@ public class NumberOfConnectedComponentsInAnUndirectedGraph {
 
     // Find the parent of a given node
     private int find(int node, int[] ids) {
+        // A node is a parent if its value matches its index
+        // Example: ids[0] = 0, ids[1] = 1, etc.
+        
+        // If the node is not the parent of the subset, then we want to find it by recursively calling find on the node's parent (ids[node]) 
         if (ids[node] != node) {
-            // Perform path compression so all nodes point directly to the parent
+            // Setting ids[node] = find(ids[node], ids) is what we do to perform path compression
+            // Path compression means making all child nodes point directly to the parent
             ids[node] = find(ids[node], ids);
         }
         
+        // By the end of the if statement, we know the node should point to the parent -> ids[node]
+        // So just return ids[node]
         return ids[node];
     }
 
