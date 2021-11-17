@@ -1,6 +1,7 @@
 // LeetCode 15: 3Sum
 // https://leetcode.com/problems/3sum/
 
+// Time Complexity: O(n^2)
 public class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
         // Sort nums first
